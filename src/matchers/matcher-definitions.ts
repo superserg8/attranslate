@@ -1,6 +1,7 @@
 import { matchIcu } from "./icu";
 import { matchI18Next } from "./i18next";
 import { matchSprintf } from "./sprintf";
+import { matchSprintfXcode } from "./sprintf-xcode";
 
 export const xmlStyleReplacer = (index: number) => `<span>${index}</span>`;
 const xmlLeftTag = "<span>";
@@ -25,6 +26,7 @@ const matcherMap = {
   icu: matchIcu,
   i18next: matchI18Next,
   sprintf: matchSprintf,
+  sprintfxcode: matchSprintfXcode,
 };
 
 export type Replacer = {
